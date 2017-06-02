@@ -33,7 +33,7 @@ function getItemAndListUrls (url, idProp) {
 
 
 
-module.exports = function(url, idProp, id){
+module.exports = function(url, idProp){
 	var data= {};
 	each( getItemAndListUrls(url, idProp), function(url, type){
 		each(methodMapping[type], function(interfaceMethod, method){
