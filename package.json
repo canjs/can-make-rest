@@ -57,7 +57,7 @@
     ]
   },
   "dependencies": {
-    "can-util": "^3.8.1",
+    "can-util": "^3.8.1"
   },
   "devDependencies": {
     "jshint": "^2.9.1",
