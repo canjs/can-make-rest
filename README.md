@@ -2,31 +2,32 @@
 
 [![Build Status](https://travis-ci.org/canjs/can-make-rest.png?branch=master)](https://travis-ci.org/canjs/can-make-rest)
 
-Make restful urls and methods from a resource
+Make restful urls and methods from a resource.  
 
-## Usage
+## `makeRest( resourceUrl[, uniqueProperty])`
 
-### ES6 use
 
-With StealJS, you can import this module directly in a template that is autorendered:
-
-```js
-import plugin from 'can-make-rest';
-```
-
-### CommonJS use
-
-Use `require` to load `can-make-rest` and everything else
-needed to create a template that uses `can-make-rest`:
+Provide it an "items" resource url and the unique property name and it returns an object with
+CRUD HTTP methods and templated urls.
 
 ```js
-var plugin = require("can-make-rest");
+makeRest("/todos","ID") //=> {
+//	  getData: {method:"GET", url: "/todos/{ID}"},
+//	  getListData: {method:"GET", url: "/todos"},
+//	  createData: {method:"POST", url: "/todos"},
+//	  updateData: {method:"PUT", url: "/todos/{ID}"},
+//	  destroyData: {method:"DELETE", url: "/todos/{ID}"}
+//  }
 ```
 
-### Standalone use
+If a templated "item" resource URL is provided, it will be able to infer the unique property name.
 
-Load the `global` version of the plugin:
-
-```html
-<script src='./node_modules/can-make-rest/dist/global/can-make-rest.js'></script>
+```js
+makeRest("/todos/{_id}") //=> {
+//	  getData: {method:"GET", url: "/todos/{_id}"},
+//	  getListData: {method:"GET", url: "/todos"},
+//	  createData: {method:"POST", url: "/todos"},
+//	  updateData: {method:"PUT", url: "/todos/{_id}"},
+//	  destroyData: {method:"DELETE", url: "/todos/{_id}"}
+//  }
 ```
