@@ -1,6 +1,6 @@
 {
   "name": "can-make-rest",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Make restful urls and methods from a resource",
   "homepage": "http://canjs.com",
   "repository": {
