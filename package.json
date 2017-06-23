@@ -41,7 +41,7 @@
     "donejs",
     "donejs-plugin"
   ],
-  "steal": {
+  "system": {
     "main": "can-make-rest",
     "configDependencies": [
       "live-reload"
