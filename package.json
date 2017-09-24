@@ -26,7 +26,7 @@
     "build": "node build.js",
     "develop": "done-serve --static --develop --port 8080"
   },
-  "main": "dist/cjs/can-make-rest",
+  "main": "./can-make-rest.js",
   "browser": {
     "transform": [
       "cssify"
