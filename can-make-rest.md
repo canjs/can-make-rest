@@ -1,4 +1,5 @@
 @page can-make-rest
+@hide
 
 # can-make-rest
 
