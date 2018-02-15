@@ -11,23 +11,23 @@ Provide it an "items" resource url and the unique property name and it returns a
 CRUD HTTP methods and templated urls.
 
 ```js
-makeRest("/todos","ID") //=> {
-//	  getData: {method:"GET", url: "/todos/{ID}"},
-//	  getListData: {method:"GET", url: "/todos"},
-//	  createData: {method:"POST", url: "/todos"},
-//	  updateData: {method:"PUT", url: "/todos/{ID}"},
-//	  destroyData: {method:"DELETE", url: "/todos/{ID}"}
+makeRest( "/todos", "ID" ); //=> {
+//    getData: {method:"GET", url: "/todos/{ID}"},
+//    getListData: {method:"GET", url: "/todos"},
+//    createData: {method:"POST", url: "/todos"},
+//    updateData: {method:"PUT", url: "/todos/{ID}"},
+//    destroyData: {method:"DELETE", url: "/todos/{ID}"}
 //  }
 ```
 
 If a templated "item" resource URL is provided, it will be able to infer the unique property name.
 
 ```js
-makeRest("/todos/{_id}") //=> {
-//	  getData: {method:"GET", url: "/todos/{_id}"},
-//	  getListData: {method:"GET", url: "/todos"},
-//	  createData: {method:"POST", url: "/todos"},
-//	  updateData: {method:"PUT", url: "/todos/{_id}"},
-//	  destroyData: {method:"DELETE", url: "/todos/{_id}"}
+makeRest( "/todos/{_id}" ); //=> {
+//    getData: {method:"GET", url: "/todos/{_id}"},
+//    getListData: {method:"GET", url: "/todos"},
+//    createData: {method:"POST", url: "/todos"},
+//    updateData: {method:"PUT", url: "/todos/{_id}"},
+//    destroyData: {method:"DELETE", url: "/todos/{_id}"}
 //  }
 ```
