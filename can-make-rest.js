@@ -35,8 +35,8 @@ function getItemAndListUrls (url, idProp) {
 
 module.exports = function(url, idProp){
 	var data= {};
-	canReflect.each( getItemAndListUrls(url, idProp), function(url, type){
-		canReflect.each(methodMapping[type], function(interfaceMethod, method){
+	canReflect.eachKey( getItemAndListUrls(url, idProp), function(url, type){
+		canReflect.eachKey(methodMapping[type], function(interfaceMethod, method){
 			data[interfaceMethod] = {
 				method: method,
 				url: url
