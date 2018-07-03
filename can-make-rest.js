@@ -1,4 +1,4 @@
-var each = require("can-util/js/each/each");
+var canReflect = require("can-reflect");
 
 var methodMapping = {
 	item: {
@@ -35,8 +35,8 @@ function getItemAndListUrls (url, idProp) {
 
 module.exports = function(url, idProp){
 	var data= {};
-	each( getItemAndListUrls(url, idProp), function(url, type){
-		each(methodMapping[type], function(interfaceMethod, method){
+	canReflect.eachKey( getItemAndListUrls(url, idProp), function(url, type){
+		canReflect.eachKey(methodMapping[type], function(interfaceMethod, method){
 			data[interfaceMethod] = {
 				method: method,
 				url: url
