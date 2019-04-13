@@ -1,6 +1,6 @@
 # can-make-rest
 
-[![Build Status](https://travis-ci.org/canjs/can-make-rest.png?branch=master)](https://travis-ci.org/canjs/can-make-rest)
+[![Build Status](https://travis-ci.org/canjs/can-make-rest.png?branch=master)](https://travis-ci.org/canjs/can-make-rest) [![Greenkeeper badge](https://badges.greenkeeper.io/canjs/can-make-rest.svg)](https://greenkeeper.io/)
 
 Make restful urls and methods from a resource.  
 
