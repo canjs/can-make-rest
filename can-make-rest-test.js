@@ -4,9 +4,9 @@ var makeRest = require("./can-make-rest");
 
 QUnit.module('can-make-rest');
 
-QUnit.test('basics', function(){
+QUnit.test('basics', function(assert) {
 
-	QUnit.deepEqual(makeRest("/todos"), {
+	assert.deepEqual(makeRest("/todos"), {
 		getData: {method:"GET", url: "/todos/{id}"},
 		getListData: {method:"GET", url: "/todos"},
 		createData: {method:"POST", url: "/todos"},
@@ -14,7 +14,7 @@ QUnit.test('basics', function(){
 		destroyData: {method:"DELETE", url: "/todos/{id}"}
 	});
 
-	QUnit.deepEqual(makeRest("/todos/{ID}"), {
+	assert.deepEqual(makeRest("/todos/{ID}"), {
 		getData: {method:"GET", url: "/todos/{ID}"},
 		getListData: {method:"GET", url: "/todos"},
 		createData: {method:"POST", url: "/todos"},
@@ -22,7 +22,7 @@ QUnit.test('basics', function(){
 		destroyData: {method:"DELETE", url: "/todos/{ID}"}
 	});
 
-	QUnit.deepEqual(makeRest("/todos","ID"), {
+	assert.deepEqual(makeRest("/todos","ID"), {
 		getData: {method:"GET", url: "/todos/{ID}"},
 		getListData: {method:"GET", url: "/todos"},
 		createData: {method:"POST", url: "/todos"},
