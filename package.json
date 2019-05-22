@@ -59,7 +59,7 @@
     ]
   },
   "dependencies": {
-    "can-reflect": "^1.0.0"
+    "can-reflect": "^1.17.10"
   },
   "devDependencies": {
     "detect-cyclic-packages": "^1.1.0",
